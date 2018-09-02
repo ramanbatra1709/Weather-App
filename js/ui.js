@@ -20,4 +20,20 @@ class UI    {
         this.visibility.textContent = `Visibility: ${weather.visibility} m`;
         this.wind.textContent = `Wind speed: ${weather.wind.speed} km/h`;
     }
+    showAlert(message, className) {
+        this.clearAlert();
+        const newDiv = document.createElement('div');
+        newDiv.className = className;
+        newDiv.appendChild(document.createTextNode(message));
+        document.querySelector('#main').insertBefore(newDiv, document.querySelector('#weatherBox'));
+        setTimeout(() => {
+            this.clearAlert()
+        }, 5000);
+    }
+    clearAlert()    {
+        const existingAlert = document.querySelector('.alert');
+        if (existingAlert !== null)  {
+            existingAlert.remove();
+        }
+    }
 }

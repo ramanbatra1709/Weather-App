@@ -11,18 +11,20 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-6 mx-auto text-center bg-primary mt-5 p-5 rounded">
-                <h1 id="w-location"></h1>
-                <h3 id="w-desc" class="text-dark"></h3>
-                <h3 id="w-string"></h3>
-                <img id="w-icon">
-                <ul class="list-groupt mt-3" id="w-details">
-                    <li class="list-group-item" id="w-humidity"></li>
-                    <li class="list-group-item" id="w-pressure"></li>
-                    <li class="list-group-item" id="w-visibility"></li>
-                    <li class="list-group-item" id="w-wind"></li>
-                </ul>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#locationModal">Change Location</button>
+            <div class="col-md-6 mx-auto text-center mt-5" id="main">
+                <div class="bg-primary p-5 rounded" id="weatherBox">
+                    <h1 id="w-location"></h1>
+                    <h3 id="w-desc" class="text-dark"></h3>
+                    <h3 id="w-string"></h3>
+                    <img id="w-icon">
+                    <ul class="list-groupt mt-3" id="w-details">
+                        <li class="list-group-item" id="w-humidity"></li>
+                        <li class="list-group-item" id="w-pressure"></li>
+                        <li class="list-group-item" id="w-visibility"></li>
+                        <li class="list-group-item" id="w-wind"></li>
+                    </ul>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#locationModal">Change Location</button>
+                </div>
             </div>
         </div>
     </div>
