@@ -13,7 +13,7 @@ class UI    {
     showWeather(weather)   {
         this.location.textContent = `${weather.name}, ${weather.sys.country}`;
         this.desc.textContent = weather.weather[0].main;
-        this.string.textContent = `${Number.parseFloat(weather.main.temp) - 273.15} °C`;
+        this.string.textContent = `${(Number.parseFloat(weather.main.temp) - 273.15).toFixed(2)} °C`;
         this.icon.setAttribute('src', `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`);
         this.humidity.textContent = `Humidity: ${weather.main.humidity}%`;
         this.pressure.textContent = `Pressure: ${weather.main.pressure} mb`; 
